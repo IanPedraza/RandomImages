@@ -1,8 +1,6 @@
 package com.ipedraza.randomimages
 
-import androidx.lifecycle.ViewModel
-
-class MainActivityViewModel: ViewModel() {
+class MainActivityViewModel {
 
     private var urlImage: String? = null
 

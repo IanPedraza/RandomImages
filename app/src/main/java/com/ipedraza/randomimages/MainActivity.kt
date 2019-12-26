@@ -17,8 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         var imagePhoto: ImageView = findViewById(R.id.imagePhoto)
 
-
-        var model = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
+        //Uso normal
+        var model: MainActivityViewModel = MainActivityViewModel()
         Picasso.get().load(model.callUrlImage()).into(imagePhoto)
+
     }
 }
