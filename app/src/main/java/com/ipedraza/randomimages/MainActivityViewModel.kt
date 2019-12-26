@@ -12,8 +12,7 @@ class MainActivityViewModel: ViewModel() {
             urlImage = MutableLiveData<String>()
             randomNombersUrl()
         }
-
-
+        
         return urlImage
     }
 

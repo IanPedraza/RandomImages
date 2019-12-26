@@ -19,10 +19,6 @@ class MainActivity : AppCompatActivity() {
         var imagePhoto2: ImageView = findViewById(R.id.imagePhoto2)
         var btnGetUrlImage: Button = findViewById(R.id.btnGetUrlImage)
 
-        //Uso normal
-        //var model: MainActivityViewModel = MainActivityViewModel()
-
-        //Uso ViewModel
         var model = ViewModelProviders.of(this).get(MainActivityViewModel::class.java)
         var urlImage : MutableLiveData<String>? = model.callUrlImage()
 
