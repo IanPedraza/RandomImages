@@ -1,23 +1,20 @@
 package com.ipedraza.randomimages
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class MainActivityViewModel: ViewModel() {
 
-    private var urlImage: MutableLiveData<String>? = null
+    private var urlImage: String? = null
 
-    fun callUrlImage(): MutableLiveData<String>? {
+    fun callUrlImage(): String? {
         if(urlImage == null){
-            urlImage = MutableLiveData<String>()
-            randomNombersUrl()
+            urlImage = randomNombersUrl()
         }
-
 
         return urlImage
     }
 
-    fun randomNombersUrl(){
-        urlImage?.value = "https://picsum.photos/${(3..5).random()}00/${(3..5).random()}00"
+    fun randomNombersUrl(): String{
+        return "https://picsum.photos/${(3..5).random()}00/${(3..5).random()}00"
     }
 }
